@@ -1,0 +1,23 @@
+- name: install Apache
+  apt: pkg=apache2 state=latest
+  tags: apache2
+
+- name: configure Apache Virtual hosts
+  template: src=site.conf dest=/etc/apache2/sites-available/{{ item.name }}.conf
+  with_items: vhosts
+  notify:
+    - restart apache2
+  tags: apache2
+
+- name: disable default site
+  file: path=/etc/apache2/sites-enabled/000-default.conf state=absent
+  notify:
+    - restart apache2
+    
+- name: enable created sites
+  file: src=/etc/apache2/sites-available/{{ item.name }}.conf dest=/etc/apache2/sites-enabled/{{ item.name }}.conf state=link
+  with_items: vhosts
+  notify:
+    - restart apache2
+
+

@@ -1,0 +1,5 @@
+- name: ensure phpMyAdmin is installed
+  apt: pkg=phpmyadmin state=present
+  tags: phpmyadmin
+  notify:
+    - restart apache2

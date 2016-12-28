@@ -1,0 +1,16 @@
+---
+- name: set hostname
+  shell: hostname {{ hostname }}
+
+- name: update apt cache
+  apt: update_cache=yes
+
+- name: a bit of locale magic
+  shell: "{{ item }}"
+  with_items:
+    - export LANGUAGE=en_US.UTF-8
+    - export LANG=en_US.UTF-8
+    - export LC_ALL=en_US.UTF-8
+
+- name: generate locale
+  locale_gen: name=en_US.UTF-8 state=present

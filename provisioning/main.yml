@@ -1,10 +1,6 @@
 ---
 - hosts: vagrant
   sudo: true
-  vars:
-    # [OPTIONAL] GitHub OAuth token to extend API rate limit
-    # How to generate it: https://github.com/blog/1509-personal-api-tokens
-    - github_oauth_token: "288f97914c53d5630ab19f40d91538355656deb1"
   vars_files:
     - defaults/variables.yml
 

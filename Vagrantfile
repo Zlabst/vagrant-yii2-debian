@@ -73,7 +73,7 @@ Vagrant.configure("2") do |config|
     # vb.customize ["modifyvm", :id, "--cpus", `grep "^processor" /proc/cpuinfo | wc -l`.chomp ]
     
     # Customize the VM name:
-    vb.name = "yii2-adv/jessie64"
+    vb.name = "Yii2 (jessie64)"
     # Customize the amount of memory on the VM:
     vb.memory = "1024"
     # Customize the number of vCPUs on the VM:

@@ -17,7 +17,7 @@ The following items are currently installed
 - vCPUs: 2
 - vCPUs execution cap: 50%
 - Memory: 1024MB
-- virtualbox title: yii2/jessie64
+- virtualbox title: Yii2 (jessie64)
 
 **Document root:** /var/www/
 

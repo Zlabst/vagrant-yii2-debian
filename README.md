@@ -20,7 +20,9 @@ The following items are currently installed
 - virtualbox title: yii2/jessie64
 
 **Document root:** /var/www/
+
 **VM Hostname:** lamp.local
+
 **Automatic Host Entries:**
 - yii2.local
 - admin.yii2.local
